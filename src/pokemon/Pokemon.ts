@@ -7,7 +7,7 @@ class Pokemon implements PokemonStructure {
 
   constructor(
     public name: string,
-    public pokedexPosition: number,
+    public pokedexPosition: string,
     public imageUrl: string,
   ) {
     this.id = uuidv4();

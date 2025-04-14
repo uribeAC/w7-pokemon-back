@@ -1,7 +1,7 @@
 export interface PokemonStructure {
   id: string;
   name: string;
-  pokedexPosition: number;
+  pokedexPosition: string;
   imageUrl: string;
   isCaptured: boolean;
 }
