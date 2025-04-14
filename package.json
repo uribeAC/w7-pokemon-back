@@ -1,0 +1,18 @@
+{
+  "name": "w7-pokemon-back",
+  "version": "1.0.0",
+  "main": "js/index.js",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "start": "node .",
+    "build:dev": "tsc --watch",
+    "start:dev": "node --watch ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
