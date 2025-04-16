@@ -28,7 +28,7 @@ describe("Given the addPokemon function", () => {
     pokemonController = new PokemonController(legendaryPokemons);
   });
 
-  describe("When it receives a request with Gengar data", () => {
+  describe("When it receives a request with Entei data", () => {
     const req = {
       body: enteiData,
     } as Pick<Request, "body">;
