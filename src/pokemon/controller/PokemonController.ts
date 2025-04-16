@@ -13,7 +13,7 @@ class PokemonController implements PokemonControllerStructure {
   addPokemon = (req: Request, res: Response): void => {
     const pokemon = req.body as PokemonCommonData;
 
-    const pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.pokedexPosition}.png`;
+    const pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${Number(pokemon.pokedexPosition)}.png`;
 
     const newPokemon = new Pokemon(
       pokemon.name,

@@ -11,6 +11,8 @@ app.use(cors({ origin: true, credentials: true }));
 
 app.use(morgan("dev"));
 
+app.use(express.json());
+
 app.get("/", checkHealthStatus);
 
 app.use("/pokemon", pokemonsRouter);
