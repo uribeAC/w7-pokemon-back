@@ -3,7 +3,7 @@ import { groudon, kyogre, rayquaza } from "../../fixtures.js";
 import PokemonController from "../PokemonController.js";
 import { PokemonCommonData } from "../../types.js";
 
-describe("Given the addMonument function", () => {
+describe("Given the addPokemon function", () => {
   const res = {
     status: jest.fn().mockReturnThis(),
     json: jest.fn(),
