@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import PokemonController from "./PokemonController.js";
-import { legendaryPokemons } from "../fixtures.js";
+import PokemonController from "../PokemonController.js";
+import { legendaryPokemons } from "../../fixtures.js";
 
 describe("Given the getPokemons function", () => {
   describe("When it receives a request for pokemons", () => {
