@@ -13,15 +13,22 @@ class PokemonController implements PokemonControllerStructure {
   addPokemon = (req: Request, res: Response): void => {
     const pokemon = req.body as PokemonCommonData;
 
+    const pokemonName =
+      pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
     const pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${Number(pokemon.pokedexPosition)}.png`;
 
     const newPokemon = new Pokemon(
-      pokemon.name,
+      pokemonName,
       pokemon.pokedexPosition,
       pokemonImage,
     );
 
-    if (this.pokemons.some((pokemon) => pokemon.name === newPokemon.name)) {
+    if (
+      this.pokemons.some(
+        (pokemon) =>
+          pokemon.name.toLowerCase() === newPokemon.name.toLowerCase(),
+      )
+    ) {
       res.status(409).json({ error: "Pokemon already in pokedex" });
       return;
     }
