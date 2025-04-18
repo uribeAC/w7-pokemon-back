@@ -24,6 +24,7 @@ describe("Given the addPokemon function", () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+
     legendaryPokemons = [kyogre, groudon, rayquaza];
     pokemonController = new PokemonController(legendaryPokemons);
   });
