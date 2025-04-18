@@ -5,4 +5,5 @@ export interface PokemonControllerStructure {
   addPokemon: (req: Request, res: Response) => void;
   deletePokemon: (req: Request, res: Response) => void;
   addToPokeball: (req: Request, res: Response) => void;
+  removeFromPokeball: (req: Request, res: Response) => void;
 }
