@@ -70,7 +70,7 @@ class PokemonController implements PokemonControllerStructure {
     }
 
     if (pokemonCaptured.isCaptured) {
-      res.status(404).json({ error: "Pokemon already in pokeball" });
+      res.status(409).json({ error: "Pokemon already in pokeball" });
       return;
     }
 
