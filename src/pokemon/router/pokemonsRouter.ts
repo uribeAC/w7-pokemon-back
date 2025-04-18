@@ -17,4 +17,9 @@ pokemonsRouter.patch(
   pokemonController.addToPokeball,
 );
 
+pokemonsRouter.patch(
+  "/remove-from-poke-ball/:pokemonId",
+  pokemonController.removeFromPokeball,
+);
+
 export default pokemonsRouter;
