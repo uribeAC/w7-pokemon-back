@@ -56,6 +56,28 @@ class PokemonController implements PokemonControllerStructure {
 
     res.status(200).json(pokemonToDelete);
   };
+
+  addToPokeball = (req: Request, res: Response): void => {
+    const pokemonId = req.params.pokemonId;
+
+    const pokemonCaptured = this.pokemons.find(
+      (pokemon) => pokemon.id === pokemonId,
+    );
+
+    if (!pokemonCaptured) {
+      res.status(404).json({ error: "Pokemon not found in pokedex" });
+      return;
+    }
+
+    if (pokemonCaptured.isCaptured) {
+      res.status(404).json({ error: "Pokemon already in pokeball" });
+      return;
+    }
+
+    pokemonCaptured.isCaptured = true;
+
+    res.status(200).json(pokemonCaptured);
+  };
 }
 
 export default PokemonController;
