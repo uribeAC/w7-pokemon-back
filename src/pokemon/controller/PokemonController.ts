@@ -10,6 +10,19 @@ class PokemonController implements PokemonControllerStructure {
     res.status(200).json({ pokemons: this.pokemons });
   };
 
+  getPokemon = (req: Request, res: Response): void => {
+    const pokemonId = req.params.pokemonId;
+
+    const pokemon = this.pokemons.find((pokemon) => pokemon.id === pokemonId);
+
+    if (!pokemon) {
+      res.status(404).json({ error: "Pokemon not found in pokedex" });
+      return;
+    }
+
+    res.status(200).json(pokemon);
+  };
+
   addPokemon = (req: Request, res: Response): void => {
     const pokemon = req.body as PokemonCommonData;
 
