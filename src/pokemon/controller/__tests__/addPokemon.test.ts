@@ -15,11 +15,13 @@ describe("Given the addPokemon function", () => {
   const enteiData: PokemonCommonData = {
     name: "Entei",
     pokedexPosition: "0244",
+    imageUrl: "http://entei.weebp",
   };
 
   const kyogreData: PokemonCommonData = {
     name: "Kyogre",
     pokedexPosition: "0382",
+    imageUrl: "http://kyogre.weebp",
   };
 
   afterEach(() => {
