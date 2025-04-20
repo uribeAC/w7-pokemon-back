@@ -28,12 +28,11 @@ class PokemonController implements PokemonControllerStructure {
 
     const pokemonName =
       pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
-    const pokemonImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${Number(pokemon.pokedexPosition)}.png`;
 
     const newPokemon = new Pokemon(
       pokemonName,
       pokemon.pokedexPosition,
-      pokemonImage,
+      pokemon.imageUrl,
     );
 
     if (
